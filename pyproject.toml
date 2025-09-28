@@ -2,14 +2,34 @@
     name = "pypc-utils"
     version = "0.1.0"
     description = "My general Python utility functions"
+    readme = "README.md"
     authors = [
         {name = "Philip Cogswell",email = "github@sisyphus21.net"}
     ]
+    maintainers = [
+        {name = "Philip Cogswell",email = "github@sisyphus21.net"}
+    ]
     license = "MIT"
-    readme = "README.md"
+    license-files = ["LICENCE",]
     requires-python = ">=3.13"
     dependencies = [
     ]
+    keywords = ["python", "utilities",]
+    classifiers = [
+        "Development Status :: 3 - Alpha",
+        "Environment :: Win32 (MS Windows)",
+        "Intended Audience :: Developers",
+        "Natural Language :: English",
+        "Operating System :: OS Independent",
+        "Programming Language :: Python :: 3",
+        "Topic :: Software Development :: Libraries :: Python Modules",
+        "Topic :: Utilities",
+    ]
+
+[project.urls]
+    Homepage = "https://github.com/TheBoojum/pypc_utils"
+    Repository = "https://github.com/TheBoojum/pypc_utils.git"
+    "Bug Tracker" = "https://github.com/TheBoojum/pypc_utils/issues"
 
 [build-system]
     requires = ["poetry-core>=2.0.0,<3.0.0"]
@@ -34,9 +54,40 @@
     include = "pypc_utils"
     from = "src"
 
+
+[[tool.poetry.source]]
+name = "github"
+url = "https://pypi.pkg.github.com/TheBoojum/pypc_utils"
+
 # Developement Tool Config
 [tool.isort]
     profile = "black"
     
 [tool.black]
     line-length = 88
+
+    # Custom: Techniques used
+
+[tool.techniques]
+features=[
+    "sphinx",
+    "black",
+    "isort",
+    "pylint",
+    "poetry",
+    "packaging",
+]
+
+[tool.pylint."MASTER"]
+    max-line-length = 100
+    ignore = ["tests", "docs"]
+
+[tool.pylint."MESSAGES CONTROL"]
+    disable = [
+        "C0114",  # missing module docstring
+        "C0115",  # missing class docstring
+        "C0116",  # missing function docstring
+    ]
+
+[tool.pylint."TYPECHECK"]
+ignored-modules = ["numpy", "pandas"]
