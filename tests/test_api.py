@@ -6,7 +6,7 @@ from datetime import timedelta
 
 import pytest
 
-import src.pypc_utils as pu
+import src.pypc-utils as pu
 
 
 def test_imports_public_api():

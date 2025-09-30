@@ -1,6 +1,6 @@
 <#
 .SYNOPSIS
-Publish pypc_utils to GitHub Packages using Poetry.
+Publish pypc-utils to GitHub Packages using Poetry.
 
 .NOTES
 - You must set the following environment variables:
@@ -11,7 +11,7 @@ Publish pypc_utils to GitHub Packages using Poetry.
 $ErrorActionPreference = "Stop"
 
 $OWNER  = if ($env:GH_OWNER) { $env:GH_OWNER } else { "TheBoojum" }
-$REPO   = if ($env:GH_REPO)  { $env:GH_REPO }  else { "pypc_utils" }
+$REPO   = if ($env:GH_REPO)  { $env:GH_REPO }  else { "pypc-utils" }
 $USERNAME = if ($env:GH_USERNAME) { $env:GH_USERNAME } else { $OWNER }
 $PAT    = $env:GH_PAT
 

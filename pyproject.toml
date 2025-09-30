@@ -1,6 +1,6 @@
 [project]
     name = "pypc-utils"
-    version = "0.1.1"
+    version = "0.1.2"
     description = "My general Python utility functions"
     readme = "README.md"
     authors = [
@@ -27,9 +27,9 @@
     ]
 
 [project.urls]
-    Homepage = "https://github.com/TheBoojum/pypc_utils"
-    Repository = "https://github.com/TheBoojum/pypc_utils.git"
-    "Bug Tracker" = "https://github.com/TheBoojum/pypc_utils/issues"
+    Homepage = "https://github.com/TheBoojum/pypc-utils"
+    Repository = "https://github.com/TheBoojum/pypc-utils.git"
+    "Bug Tracker" = "https://github.com/TheBoojum/pypc-utils/issues"
 
 [build-system]
     requires = ["poetry-core>=2.0.0,<3.0.0"]
@@ -51,13 +51,13 @@
     sphinx-autodoc-typehints = "^3.2.0"
 
 [[tool.poetry.packages]]
-    include = "pypc_utils"
+    include = "pypc-utils"
     from = "src"
 
 
 [[tool.poetry.source]]
 name = "github"
-url = "https://pypi.pkg.github.com/TheBoojum/pypc_utils"
+url = "https://pypi.pkg.github.com/TheBoojum"
 
 # Development Tool Config
 [tool.isort]

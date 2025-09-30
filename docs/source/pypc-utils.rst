@@ -7,7 +7,7 @@ Submodules
 pypc\_utils.core module
 -----------------------
 
-.. automodule:: pypc_utils.core
+.. automodule:: pypc-utils.core
    :members:
    :show-inheritance:
    :undoc-members:
@@ -15,7 +15,7 @@ pypc\_utils.core module
 Module contents
 ---------------
 
-.. automodule:: pypc_utils
+.. automodule:: pypc-utils
    :members:
    :show-inheritance:
    :undoc-members:

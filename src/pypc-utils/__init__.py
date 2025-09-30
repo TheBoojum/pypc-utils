@@ -1,5 +1,5 @@
 """
-Public API for pypc_utils.
+Public API for pypc-utils.
 """
 
 from .core import (

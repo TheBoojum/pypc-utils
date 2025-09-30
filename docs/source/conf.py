@@ -15,7 +15,7 @@ from pathlib import Path
 SRC = str(Path(__file__).resolve().parents[2] / "src")
 sys.path.insert(0, SRC)
 
-project = "pypc_utils"
+project = "pypc-utils"
 copyright = "2025, Philip Cogswell"
 author = "Philip Cogswell"
 release = "0.1.0"
