@@ -59,7 +59,7 @@
 name = "github"
 url = "https://pypi.pkg.github.com/TheBoojum/pypc_utils"
 
-# Developement Tool Config
+# Development Tool Config
 [tool.isort]
     profile = "black"
     

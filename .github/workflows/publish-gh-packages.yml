@@ -1,0 +1,36 @@
+name: Publish to GitHub Packages (Python)
+
+on:
+    push:
+        tags:
+            - "v*" # Trigger the workflow on tags like v0.1.0
+
+jobs:
+    publish:
+        runs-on: ubuntu-latest
+        permissions:
+            contents: read
+            packages: write
+        steps:
+            - uses: actions/checkout@v4
+
+            - name: Set up Python
+              uses: actions/setup-python@v5
+              with:
+                  python-version: "3.11"
+
+            - name: Install Poetry
+              run: |
+                  curl -sSL https://install.python-poetry.org | python3 -
+                  echo "$HOME/.local/bin" >> $GITHUB_PATH
+
+            - name: Configure Poetry credentials for GH Packages
+              env:
+                  GH_USERNAME: ${{ secrets.GH_USERNAME }}
+                  GH_PAT: ${{ secrets.GH_PAT }}
+              run: |
+                  poetry config http-basic.github "$GH_USERNAME" "$GH_PAT"
+
+            - name: Build and Publish to GitHub Packages
+              run: |
+                  poetry publish -r github --build
