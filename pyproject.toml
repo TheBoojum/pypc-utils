@@ -1,6 +1,6 @@
 [project]
     name = "pypc-utils"
-    version = "0.1.2"
+    version = "0.1.3"
     description = "My general Python utility functions"
     readme = "README.md"
     authors = [
@@ -53,11 +53,6 @@
 [[tool.poetry.packages]]
     include = "pypc-utils"
     from = "src"
-
-
-[[tool.poetry.source]]
-name = "github"
-url = "https://pypi.pkg.github.com/TheBoojum"
 
 # Development Tool Config
 [tool.isort]

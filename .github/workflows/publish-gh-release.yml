@@ -1,0 +1,36 @@
+name: Build and Release with Poetry
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'  # or your preferred version
+
+      - name: Install Poetry
+        run: pip install poetry 
+
+      - name: Clean dist folder
+        run: rm -rf dist
+
+      - name: Build package with Poetry
+        run: poetry build
+
+      - name: Upload Release Assets
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ github.ref_name }}
+          files: dist/*
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
