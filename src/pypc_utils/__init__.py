@@ -1,5 +1,5 @@
 """
-Public API for pypc-utils.
+Public API for pypc_utils.
 """
 
 from .core import (
@@ -38,4 +38,4 @@ __all__ = [
     "print_current_user",
 ]
 
-__version__ = "0.1.0"
+__version__ = "0.1.4"

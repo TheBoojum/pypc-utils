@@ -1,9 +1,9 @@
-.. pypc-utils documentation master file, created by
+.. pypc_utils documentation master file, created by
    sphinx-quickstart on Sat Sep 27 17:16:09 2025.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-pypc-utils documentation
+pypc_utils documentation
 ========================
 
 Add your content using ``reStructuredText`` syntax. See the
