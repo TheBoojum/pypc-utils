@@ -1,6 +1,6 @@
 [project]
     name = "pypc_utils"
-    version = "0.1.4"
+    version = "0.1.5"
     description = "My general Python utility functions"
     readme = "README.md"
     authors = [
