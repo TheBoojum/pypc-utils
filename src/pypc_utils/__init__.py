@@ -38,4 +38,4 @@ __all__ = [
     "print_current_user",
 ]
 
-__version__ = "0.1.5"
+__version__ = "0.1.6"

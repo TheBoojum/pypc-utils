@@ -18,7 +18,7 @@ sys.path.insert(0, SRC)
 project = "pypc_utils"
 copyright = "2025, Philip Cogswell"
 author = "Philip Cogswell"
-release = "0.1.5"
+release = "0.1.6"
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
